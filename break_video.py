@@ -5,18 +5,18 @@ import os
 import requests
 from recog import describe_frame
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "Nope"
 
 
 # Global system message
 SYSTEM_MESSAGE = "You are a summarization expert. Follow the summarization instructions exactly."
 
-'''   # using ollama
+ # using ollama
 def send_to_ollama(prompt):
     """
     Sends the combined text to the Ollama API and returns the response.
     """
-    selected_model = 'qwen2.5-coder:latest' #"mistral:latest"
+    selected_model = 'deepseek-r1:32b'
     url = "http://localhost:11434/api/generate"
     headers = {"Content-Type": "application/json"}
     
@@ -34,6 +34,8 @@ def send_to_ollama(prompt):
     except requests.RequestException as e:
         print(f"Error communicating with Ollama: {e}")
         return None
+
+
 '''
 # using groq
 
@@ -65,7 +67,7 @@ def send_to_ollama(prompt):
         print(f"Error communicating with Groq API: {e}")
         return None
 
-
+'''
 
 
 
